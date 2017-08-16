@@ -15,8 +15,13 @@ before((done) => {
 
 // hook
 beforeEach((done) => {
-  mongoose.connection.collections.users.drop(() => {
-    // ready to run test
-    done()
+  // mongoose lowercase all collection name to lowercase and send to mongodb
+  const { users, comments, blogposts } = mongoose.connection.collections 
+  users.drop(() => {
+    comments.drop(() => {
+      blogposts.drop(() => {
+        done()
+      })
+    })
   })
-})
+})  
