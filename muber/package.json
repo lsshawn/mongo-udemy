@@ -1,0 +1,21 @@
+{
+  "name": "muber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "SET NODE_ENV=test & nodemon --exec \"mocha --require babel-core/register --recursive -R min\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mocha": "^3.5.0",
+    "mongoose": "^4.11.7",
+    "supertest": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-register": "^6.26.0"
+  }
+}
